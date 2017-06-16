@@ -1,0 +1,28 @@
+corrcoef(x,y) = 2X2 중에서 <----- (1,2) ,  (2,1) 똑같은 갑이 correlation coefficients
+
+x 는 라밸 백터 y 는 feature 백터
+
+
+corrcoef(x,y) = 2X2 중에서 <----- (1,2) ,  (2,1) 똑같은 갑이 correlation coefficients
+
+---------------------------------------
+
+
+prob_estimates_testing = 14 feature ->>new land mark __>> train SVM(001) : result  prob_estimates_testing = 14 feature as a landmark --> svm (002) : result  
+
+
+relt1- rest2 = always 
+
+
+
+training new land mark<-----
+
+
+-----
+
+svmtrain 
+
+save test22.mat test22;
+
+save prob_testing.mat prob_testing;
+ave prob_real_training.mat prob_real_training;
