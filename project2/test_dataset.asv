@@ -1,0 +1,51 @@
+test_image1=imread('D:\patternreconization\project2\Test_and_background_Images\Test_Image_1.jpg');
+test_image2=imread('D:\patternreconization\project2\Test_and_background_Images\Test_Image_2.jpg');
+
+gr1=rgb2gray(test_image1);
+gr2=rgb2gray(test_image2);
+
+resize_gr1=imresize(gr1,0.07);
+figure,imshow()
+resize_gr2=imresize(gr2,0.05);
+
+size_1r=size(resize_gr1);
+
+test_ft_set=[];
+for i=1:size_1r(1,2)-15   
+    for j=1:size_1r(1,1)-15
+        test_ft_set{i,j}=imcrop(resize_gr1,[i j 15 15]);
+    end
+end
+
+test_size_lop=size(test_ft_set);
+
+test_feature=[]
+for p = 1:test_size_lop(1,1)
+    p
+    for qq = 1:test_size_lop(1,2)
+        qq
+        tempImage = test_ft_set{p,qq};
+
+        %for this RGB image, convert it to grey scale
+        %find the integral image
+        II = getIntegralImage(tempImage);
+
+        %find the value of each feature for this image
+        count=0;
+        for i = 1 : 2 %type
+            for scale_x = 1 : 16 %scale_x
+                for scale_y = 1 : 16 %scale_y
+                    for x = 1 : 16 %x
+                        for y = 1 : 16 %y
+                            if(possible_feature(i,x,y,scale_x,scale_y) == true)
+                                count= count+1;
+                                %find the value (difference of rectangles)
+                                test_feature(count,p) = feature_value(II,i,x,y,scale_x,scale_y);
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
