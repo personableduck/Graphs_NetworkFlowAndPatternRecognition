@@ -1,0 +1,12 @@
+https://docs.google.com/presentation/d/1lDTmA3V2o8qO5LUyxXw_c1D630aMnlw3tjKxXftNigI/edit#slide=id.i16
+
+답지
+
+https://blog.cordiner.net/2010/12/02/eigenfaces-face-recognition-matlab/
+
+참고 사이트
+
+
+https://github.com/zhmxu/Machine-Learning-AAM-Face-Modeling-and-Reconstruction/blob/master/REPORT_CS276_Project1_Report_004414435.pdf
+
+Githup
